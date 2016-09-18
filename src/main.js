@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+require('./style.scss');
 
 class VideoPreview extends Component {
   propTypes: {
