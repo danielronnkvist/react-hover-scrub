@@ -85,7 +85,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return _react2.default.createElement(
 	        "div",
 	        { className: "video-preview" },
-	        "Hello World!"
+	        _react2.default.createElement("video", { src: this.props.video, autoPlay: true, loop: true })
 	      );
 	    }
 	  }]);
