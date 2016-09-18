@@ -1,0 +1,7 @@
+{
+  "name": "video-preview-element",
+  "version": "1.0.0",
+  "description": "Simple react UI-element inspired by Adobe premiere pro scroll over video preview.",
+  "author": "Daniel Rönnkvist <daniel@ronnkvist.com>",
+  "license": "MIT"
+}
