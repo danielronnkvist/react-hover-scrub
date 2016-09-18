@@ -7,7 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'video-preview-element.js',
     library: 'VideoPreview',
-    libraryTarget: 'var'
+    libraryTarget: 'umd'
   },
   devtool: 'source-map',
   module: {
@@ -23,7 +23,12 @@ module.exports = {
     ]
   },
   externals: {
-    'react': 'React'
+    'react': {
+      root: 'React',
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+    }
   },
   resolve: {
     extensions: ['', '.js']
