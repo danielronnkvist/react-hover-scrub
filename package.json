@@ -1,7 +1,22 @@
 {
   "name": "video-preview-element",
   "version": "1.0.0",
+  "main": "dist/video-preview-element.js",
+  "scripts": {
+    "start": "webpack --watch --progress --colors --inline"
+  },
   "description": "Simple react UI-element inspired by Adobe premiere pro scroll over video preview.",
   "author": "Daniel Rönnkvist <daniel@ronnkvist.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "dependencies": {
+    "react": "^15.3.1"
+  }
 }
