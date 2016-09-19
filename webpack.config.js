@@ -5,8 +5,8 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'video-preview-element.js',
-    library: 'VideoPreview',
+    filename: 'react-hover-scrub.js',
+    library: 'HoverScrub',
     libraryTarget: 'umd'
   },
   devtool: 'source-map',

@@ -1,7 +1,7 @@
 {
-  "name": "video-preview-element",
+  "name": "react-hover-scrub",
   "version": "1.0.0",
-  "main": "dist/video-preview-element.js",
+  "main": "dist/react-hover-scrub.js",
   "scripts": {
     "start": "webpack --watch --progress --colors --inline",
     "build": "webpack -p --progress --colors --inline"

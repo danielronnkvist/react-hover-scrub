@@ -4,7 +4,7 @@ import React, { Component, PropTypes } from 'react';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
 
-class VideoPreview extends Component {
+class HoverScrub extends Component {
   propTypes: {
     video: React.PropTypes.string,
   }
@@ -30,4 +30,4 @@ class VideoPreview extends Component {
   }
 }
 
-module.exports = VideoPreview;
+module.exports = HoverScrub;
