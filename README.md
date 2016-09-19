@@ -1,6 +1,8 @@
 Hover Scrub
 ===
 
+[![npm version](https://badge.fury.io/js/react-hover-scrub.svg)](https://badge.fury.io/js/react-hover-scrub)
+
 Simple react UI-element inspired by Adobe premiere pro scroll over video preview.
 
 ## Examples
@@ -16,4 +18,9 @@ export default function Application () {
     </div>
   );
 };
+```
+## Installation
+
+```
+npm install --save react-hover-scrub
 ```
