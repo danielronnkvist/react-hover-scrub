@@ -17,9 +17,3 @@ export default function Application () {
   );
 };
 ```
-
-##Installation
-
-```
-npm install --save react-hover-scrub
-```
