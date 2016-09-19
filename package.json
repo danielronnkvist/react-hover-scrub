@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "dist/video-preview-element.js",
   "scripts": {
-    "start": "webpack --watch --progress --colors --inline"
+    "start": "webpack --watch --progress --colors --inline",
+    "build": "webpack -p --progress --colors --inline"
   },
   "description": "Simple react UI-element inspired by Adobe premiere pro scroll over video preview.",
   "author": "Daniel Rönnkvist <daniel@ronnkvist.com>",
