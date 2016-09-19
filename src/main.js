@@ -15,7 +15,8 @@ class VideoPreview extends Component {
 
     source.subscribe((e) => {
       let width = getComputedStyle(element).width.split('px')[0];
-      let percentage = e.clientX / width;
+      let elementX = element.getBoundingClientRect().left;
+      let percentage = (e.clientX - elementX) / width;
       let newTime = percentage * element.duration;
 
       element.currentTime = newTime;
