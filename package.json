@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "dist/react-hover-scrub.js",
   "scripts": {
-    "start": "webpack --watch --progress --colors --inline",
-    "build": "webpack -p --progress --colors --inline"
+    "start": "webpack --watch --progress --colors --inline"
   },
   "description": "Simple react UI-element inspired by Adobe premiere pro scroll over video preview.",
   "author": "Daniel Rönnkvist <daniel@ronnkvist.com>",
@@ -18,6 +17,7 @@
     "node-sass": "^3.10.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
+    "unminified-webpack-plugin": "^1.1.0",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
   },

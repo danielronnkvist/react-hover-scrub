@@ -1,11 +1,12 @@
 var webpack = require('webpack');
 var path = require('path');
+var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'react-hover-scrub.js',
+    filename: 'react-hover-scrub.min.js',
     library: 'HoverScrub',
     libraryTarget: 'umd'
   },
@@ -45,5 +46,11 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': "'"+process.env.NODE_ENV+"'",
     }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
+    new UnminifiedWebpackPlugin()
   ],
 }
