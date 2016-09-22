@@ -3,7 +3,9 @@ require('./style.scss');
 import React, { Component, PropTypes } from 'react';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
+import 'rxjs/add/observable/interval';
 import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/skipWhile';
 import 'rxjs/add/operator/map';
 
 class HoverScrub extends Component {
@@ -16,8 +18,11 @@ class HoverScrub extends Component {
     const onloadeddata = Observable.fromEvent(element, 'loadeddata');
     const mousemove = Observable.fromEvent(element, 'mousemove');
 
-    const source = onloadeddata.flatMap((x) => {
-      return mousemove.map( (e) => e.clientX );
+    const source = onloadeddata.flatMap((video) => {
+      return Observable
+        .interval(250)
+        .skipWhile(() => video.readyState < 3)
+        .flatMap(() => mousemove.map( (e) => e.clientX ))
     });
 
     source.subscribe((x) => {
@@ -30,6 +35,7 @@ class HoverScrub extends Component {
     });
 
     element.load();
+    // element.play();
   }
 
   render() {
