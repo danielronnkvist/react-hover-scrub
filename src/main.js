@@ -1,5 +1,3 @@
-require('./style.scss');
-
 import React, { Component, PropTypes } from 'react';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
@@ -7,6 +5,8 @@ import 'rxjs/add/observable/interval';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/skipWhile';
 import 'rxjs/add/operator/map';
+
+import styles from './style.scss';
 
 class HoverScrub extends Component {
   propTypes: {
@@ -35,12 +35,11 @@ class HoverScrub extends Component {
     });
 
     element.load();
-    // element.play();
   }
 
   render() {
     return (
-      <video className="video-preview" src={this.props.video} />
+      <video className={styles.video} src={this.props.video} />
     );
   }
 }
